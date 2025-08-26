@@ -1,38 +1,207 @@
-.App {
+:root {
+  --primary-bg: #282828;
+  --primary-text: #ffffff;
+  --secondary-text: #000000;
+
+  --navbar-size: 40px;
+  --nav-size: 16px;
+
+  --nav-bg: #2c2c2c;
+  --nav-active-bg: #3a3a3a;
+  --nav-text: #ffffff;
+  --nav-active: #2cff8b;
+  --nav-radius: 10px;
+  --nav-padding: 8px 14px;
+
+  --card-bg: #5c5c5c;
+}
+
+nav {
+  background-color: var(--primary-bg);
+}
+
+.navbar .navbar-brand {
+  font-size: var(--navbar-size);
+}
+
+.nav-link {
+  font-size: var(--nav-size);
+}
+
+.navbar .navbar-brand,
+.nav-link {
+  color: var(--nav-text) !important;
+  text-decoration: none;
+  padding: var(--nav-padding);
+  border-radius: var(--nav-radius);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--nav-active) !important;
+  background-color: transparent !important;
+}
+
+.navbar .nav-link.active {
+  color: var(--nav-active) !important;
+  background-color: var(--nav-active-bg) !important;
+  /* box-shadow: 0 2px 6px rgba(44, 255, 139, 0.25); */
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-toggler {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.navbar-toggler .fa-bars {
+  color: var(--nav-text);
+}
+
+/* .App {
   text-align: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: var(--primary-bg);
+  /* min-height: 100vh; */
+}
+
+.intro-hello {
+  color: var(--primary-text);
+  font-size: 4rem;
+}
+
+.intro-name {
+  color: var(--nav-active);
+}
+
+.intro-title {
+  color: var(--primary-text);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.intro-desc {
+  color: var(--primary-text);
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.btn-resume {
+  background-color: var(--nav-active);
+  padding: 10px 5px;
+  border-radius: 30px;
+  color: var(--secondary-text);
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.25rem;
+}
+
+.btn-resume:hover {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  border: 1px solid var(--nav-active);
+}
+
+.App-body {
+  background-color: var(--primary-bg);
+  /* min-height: 100vh; */
+}
+
+.logo-img {
+  height: 120px;
+  width: 120px;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.3s ease;
+}
+
+.logo-img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.section-title {
+  color: var(--primary-text);
+  font-size: 4rem;
+  display: inline-block;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: -10px;
+  width: 30%;
+  height: 5px;
+  background-color: var(--nav-active);
+}
+
+.card-exp h1,
+.card-exp p {
+  color: var(--primary-text);
+}
+
+.card-exp .card-body {
+  background-color: var(--card-bg);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px 0 rgba(44, 255, 139, 0.25);
+  transition: 0.3s;
+}
+
+.card-exp .card-body:hover {
+  box-shadow: 0 6px 20px 0 rgba(44, 255, 139, 0.25);
+}
+
+.Footer {
+  background-color: var(--nav-active);  
+}
+
+.Footer p {
+  margin-bottom: 0 !important;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background: var(--nav-active);
+  color: var(--secondary-text);
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.scroll-to-top:hover {
+  background: var(--primary-bg);
+  color: var(--nav-active);
+  border: 1px solid var(--nav-active);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
