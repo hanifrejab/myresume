@@ -26,12 +26,12 @@ function Navbar() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 me-5 mb-lg-0">
+          <ul className="navbar-nav mb-2 mb-lg-0 ms-auto me-lg-5 mx-auto text-center">
             <li className="nav-item">
               <a
                 className={`nav-link ${active === "home" ? "active" : ""}`}
-                onClick={() => setActive("home")}
                 href="#home"
+                onClick={() => setActive("home")}
               >
                 Home
               </a>
@@ -39,8 +39,8 @@ function Navbar() {
             <li className="nav-item">
               <a
                 className={`nav-link ${active === "exp" ? "active" : ""}`}
-                onClick={() => setActive("exp")}
                 href="#exp"
+                onClick={() => setActive("exp")}
               >
                 Experiences
               </a>
@@ -48,36 +48,34 @@ function Navbar() {
             <li className="nav-item">
               <a
                 className={`nav-link ${active === "pro" ? "active" : ""}`}
-                onClick={() => setActive("pro")}
                 href="#pro"
+                onClick={() => setActive("pro")}
               >
                 Projects
               </a>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
-                href="https://www.linkedin.com/in/hanifkhuzairi/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-brands fa-linkedin-in"></i>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="https://github.com/hanifrejab"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-brands fa-github"></i>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="mailto:hanifrejab98@gmail.com">
-                <i className="fa-solid fa-envelope"></i>
-              </a>
+              <div className="d-flex justify-content-center gap-3">
+                <a
+                  className="nav-link"
+                  href="https://www.linkedin.com/in/hanifkhuzairi/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a
+                  className="nav-link"
+                  href="https://github.com/hanifrejab"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa-brands fa-github"></i>
+                </a>
+                <a className="nav-link" href="mailto:hanifrejab98@gmail.com">
+                  <i className="fa-solid fa-envelope"></i>
+                </a>
+              </div>
             </li>
           </ul>
         </div>

@@ -2,19 +2,21 @@ function Header() {
   return (
     <header className="App-header">
       <div className="container">
-        <div className="row align-items-center justify-content-center p-3">
+        <div className="row align-items-center justify-content-center p-3 header-row">
+          <div className="col-md-4 text-center">
+            <img
+              src="./assets/profile.svg"
+              alt="Placeholder"
+              className="img-fluid profile-img"
+            />
+          </div>
           <div className="col-md-8 text-center text-md-start px-5">
             <h1 className="intro-hello">
-              Hi, I'm <span className="intro-name">Hanif Khuzairi</span>
+              Hi, I'm <span className="intro-name">Hanif</span> Khuzairi
             </h1>
             <p className="intro-title">Web Developer</p>
             <p className="intro-desc">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-              vel, aliquet nec, vulputate eget, arcu.
+              "Let’s Build Something Amazing Together"
             </p>
             <a
               href="./assets/resume.pdf"
@@ -24,13 +26,6 @@ function Header() {
             >
               My Resume
             </a>
-          </div>
-          <div className="col-md-4 text-center">
-            <img
-              src="./assets/profile.svg"
-              alt="Placeholder"
-              className="img-fluid profile-img"
-            />
           </div>
         </div>
       </div>
