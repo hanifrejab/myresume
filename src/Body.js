@@ -158,7 +158,6 @@ function Body() {
               >
                 Learn More
               </a>
-              Test2
             </div>
           </div>
         </div>
